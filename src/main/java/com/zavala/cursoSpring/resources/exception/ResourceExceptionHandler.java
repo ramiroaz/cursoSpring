@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import com.zavala.cursoSpring.services.exceptions.DataIntegrityException;
 import com.zavala.cursoSpring.services.exceptions.ObjectNotFoundException;
 
 @ControllerAdvice
@@ -14,7 +15,7 @@ public class ResourceExceptionHandler {
 	
 	@ExceptionHandler(ObjectNotFoundException.class)
 	public ResponseEntity<StandardError> 
-			ObjectNotfound(ObjectNotFoundException e, HttpServletRequest request) {
+			objectNotfound(ObjectNotFoundException e, HttpServletRequest request) {
 		
 		StandardError err = new StandardError(HttpStatus.NOT_FOUND.value()
 											, e.getMessage()
@@ -23,4 +24,16 @@ public class ResourceExceptionHandler {
 		
 	}
 	
+	@ExceptionHandler(DataIntegrityException.class)
+	public ResponseEntity<StandardError> 
+			dataIntegrity(DataIntegrityException e, HttpServletRequest request) {
+		
+		StandardError err = new StandardError(HttpStatus.BAD_REQUEST.value()
+											, e.getMessage()
+											, System.currentTimeMillis());
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
+		
+	}
+
+
 }
