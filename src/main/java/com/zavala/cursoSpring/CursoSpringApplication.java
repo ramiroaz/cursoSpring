@@ -71,6 +71,10 @@ public class CursoSpringApplication implements CommandLineRunner {
 		Categoria cat1 = new Categoria(null,"Informática");
 		Categoria cat2 = new Categoria(null,"Escritório");
 		Categoria cat3 = new Categoria(null,"Limpeza");
+		Categoria cat4 = new Categoria(null,"Cama, Mesa e Banho");
+		Categoria cat5 = new Categoria(null,"Eletrônicos");
+		Categoria cat6 = new Categoria(null,"Jardinagem");
+		Categoria cat7 = new Categoria(null,"Decoração");
 		
 		Produto p1 = new Produto(null, "Computador", 2000.00);
 		Produto p2 = new Produto(null, "Impressora", 800.00);
@@ -86,7 +90,7 @@ public class CursoSpringApplication implements CommandLineRunner {
 		p3.getCategorias().addAll(Arrays.asList(cat1));
 		p4.getCategorias().addAll(Arrays.asList(cat3));
 		
-		categoriaRepository.saveAll(Arrays.asList(cat1,cat2,cat3));
+		categoriaRepository.saveAll(Arrays.asList(cat1,cat2,cat3,cat4,cat5,cat6,cat7));
 		produtoRepository.saveAll(Arrays.asList(p1, p2, p3, p4));
 
 		Estado est1 = new Estado(null, "Minas Gerais");
