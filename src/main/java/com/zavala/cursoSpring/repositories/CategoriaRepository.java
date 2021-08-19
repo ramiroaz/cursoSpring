@@ -7,7 +7,5 @@ import com.zavala.cursoSpring.domain.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
-
-	
 	
 }
