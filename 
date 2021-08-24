@@ -1,0 +1,28 @@
+[33m0333acc[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m Validação customizada do CPF e CNPJ na inserção do Cliente
+[33mc6c749c[m[33m ([m[1;31morigin/master[m[33m)[m Ajustando e testando a exclussão de Cliente
+[33m58b8c4f[m Inserindo um novo Cliente com POST
+[33m85b64d9[m Ajustes : Update em CategoriaService e no construtor de Pagamento
+[33m7afa9bb[m Put, Delete e Get para Cliente
+[33m1a24a45[m Personalizando o retorno da validação
+[33mc134b53[m Validação sintatica com Bean Validation
+[33md19e8c7[m Paginação com parâmetros opcionais na requisição
+[33m508d40c[m Listando todas as Categorias com DTO
+[33meab3b09[m Deletando uma Categoria com DELETE
+[33m380fc59[m Atualizando Categoria com PUT; outros ajustes
+[33ma27ab3e[m Inserindo uma Categoria com POST
+[33mf9a196c[m Atualização : utilizando somente JsonIgnore
+[33m7b23fcc[m Endpoint /pedidos/{id} disponibilizado
+[33ma10392e[m ItemPedido e ItemPedidoPK
+[33mcaed73f[m Pedido, EstadoPagamento e Pagamento
+[33m8651444[m Endpoint /clientes/{id} disponivel
+[33mbea7500[m Cliente, TipoCliente, Telefone, Endereco
+[33m59e8eed[m Estado e Cidade
+[33m4e8a913[m Ajustes no endpoint /categorias/{id}
+[33md880562[m Produto e associação muitos para muitos
+[33m6823b2f[m Criando operação de instanciação
+[33mad0175b[m Criando Repository e Service para Categoria
+[33mcc68928[m Banco de dados H@ e criação automatica da tabela Categoria
+[33me408717[m Testando a primeira classe de dominio - Categoria
+[33me369a54[m Testando a primeira classe de dominio - Categoria
+[33mdedccf9[m REST testado
+[33m7229a6e[m Projeto criado
