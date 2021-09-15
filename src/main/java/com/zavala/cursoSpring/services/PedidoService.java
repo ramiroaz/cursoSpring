@@ -42,11 +42,9 @@ public class PedidoService {
 	private EmailService emailService;
 	
 	public Pedido find(Integer id) {
-		
 		Optional<Pedido> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				"Objeto não encontrado! Id: " + id + ", Tipo: " + Pedido.class.getName()));
-		
 	}
 	
 	@Transactional
@@ -74,10 +72,10 @@ public class PedidoService {
 		}
 		itemPedidoRepository.saveAll(obj.getItens());  //Ramiro
 		
-		//System.out.println(obj);  //Teste imprime pedido. Automaticamente chama ao ToString
-		emailService.sendOrderConfirmationEmail(obj);
+		//System.out.println(obj);  						//Teste imprime pedido. Automaticamente chama ao ToString
+		//emailService.sendOrderConfirmationEmail(obj);  	//envia e-mail texto plano
+		emailService.sendOrderConfirmationHtmlEmail(obj);   // envia e-mail html
 		
 		return obj;
 	}
-	
 }
